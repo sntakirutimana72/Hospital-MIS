@@ -10,7 +10,7 @@ CREATE TABLE nurses (
   id SERIAL PRIMARY KEY,
   employee_id INT NOT NULL REFERENCES employees(id),
   rotation_id INT NOT NULL REFERENCES rotations(id),
-  department_id INT NOT NULL REFERENCES departments(id);
+  department_id INT NOT NULL REFERENCES departments(id),
   salary FLOAT NOT NULL,
 
   CONSTRAINT nurses_unique_employee_id UNIQUE (employee_id)
@@ -26,5 +26,5 @@ CREATE TABLE wards (
   num_of_beds INT NOT NULL DEFAULT '1',
   status wards_status NOT NULL DEFAULT 'ready',
 
-  CONSTRAINT wards_unique_department_ward_number(department_id, ward_number)
+  CONSTRAINT wards_unique_department_ward_number UNIQUE (department_id, ward_number)
 );
