@@ -15,6 +15,13 @@
   </properties>
 
   <dependencies>
+    <!--  Environment Variables Enabler  -->
+    <dependency>
+      <groupId>io.github.cdimascio</groupId>
+      <artifactId>dotenv-java</artifactId>
+      <version>3.0.0</version>
+    </dependency>
+
     <!--  Database configuration  -->
     <dependency>
       <groupId>org.postgresql</groupId>
@@ -25,6 +32,27 @@
       <groupId>com.zaxxer</groupId>
       <artifactId>HikariCP</artifactId>
       <version>5.1.0</version>
+    </dependency>
+    <!--  For managing migrations -->
+    <dependency>
+      <groupId>org.flywaydb</groupId>
+      <artifactId>flyway-core</artifactId>
+      <version>9.16.0</version>
+    </dependency>
+
+    <!--  Logging  -->
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.5.18</version> <!-- or latest stable -->
+    </dependency>
+
+    <!--  Annotations  -->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.38</version>
+      <scope>provided</scope>
     </dependency>
 
     <dependency>
