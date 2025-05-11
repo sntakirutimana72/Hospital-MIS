@@ -25,10 +25,4 @@ public class Connector {
   public static Connection getConnection() throws SQLException {
     return source.getConnection();
   }
-
-  public static void closeConnection() {
-    if (Objects.nonNull(source)) {
-      source.close();
-    }
-  }
 }
